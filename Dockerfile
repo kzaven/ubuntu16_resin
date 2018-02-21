@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
   wget \
   unzip \
   tar \
+  bzip2 \
   vim \
   openssh-server
 
