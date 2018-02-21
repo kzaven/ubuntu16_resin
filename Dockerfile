@@ -9,8 +9,7 @@ RUN apt-get update && apt-get install -y \
     tar \
     bzip2 \
     vim \
-    sudo \
-    openssh-server
+    sudo 
 
 WORKDIR /L4T
 
