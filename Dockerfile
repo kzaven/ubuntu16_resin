@@ -36,6 +36,8 @@ RUN apt-get update && apt-get install -y  \
   gcc-7 \
   g++-7
 
+RUN apt-get update && apt-get install -y sudo
+
 # Install L4T 28.1
 RUN cd /L4T/Linux_for_Tegra  && ./apply_binaries.sh -r /
 # Fix ld path to CUDA libraries
