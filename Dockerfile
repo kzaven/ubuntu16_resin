@@ -105,7 +105,11 @@ RUN apt-get update && apt-get install -y \
   libtiff5 \
   libjasper1
 
-#Install OpenCV and Tensorflow Python3.6
+#install docker and docker-compose
+RUN /bin/bash /tmp/scripts/install_docker.sh
+RUN pip3 install docker-compose
+
+#Install OpenCV and Tensorflow
 COPY files /tmp/files
 COPY scripts /tmp/scripts
 RUN /bin/bash /tmp/scripts/install_opencv_tensorflow.sh
