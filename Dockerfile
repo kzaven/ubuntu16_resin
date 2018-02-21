@@ -1,7 +1,7 @@
 #######################
 # L4T R28.1.0 SOURCES #
 #######################
-FROM aarch64/ubuntu:14.04
+FROM aarch64/ubuntu:16.04
 
 RUN apt-get update && apt-get install -y \
   wget \
