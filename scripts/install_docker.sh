@@ -386,7 +386,7 @@ do_install() {
 					$sh_c 'sed -i "/deb-src.*download\.docker/d" /etc/apt/sources.list.d/docker.list'
 				fi
 				$sh_c 'apt-get update -qq >/dev/null'
-				$sh_c 'apt-get install -y -qq --no-install-recommends docker-ce >/dev/null'
+				$sh_c 'apt-get install -y -qq --no-install-recommends docker-ce=17.12.0~ce-0~ubuntu >/dev/null'
 			)
 			echo_docker_as_nonroot
 			exit 0
@@ -426,7 +426,7 @@ do_install() {
 					$sh_c "$config_manager $enable_channel_flag docker-ce-$CHANNEL"
 				fi
 				$sh_c "$pkg_manager makecache"
-				$sh_c "$pkg_manager install -y -q docker-ce"
+				$sh_c "$pkg_manager install -y -q docker-ce=17.12.0~ce-0~ubuntu"
 			)
 			echo_docker_as_nonroot
 			exit 0
