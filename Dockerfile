@@ -75,4 +75,7 @@ RUN git clone git@github.com:Skycatch/python-discover-ml.git \
     && cd models \
     && git clone git@github.com:tensorflow/models.git
 
+#Configurinng docker
+COPY daemon.json /
+
 ENV INITSYSTEM on
